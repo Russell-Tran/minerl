@@ -143,6 +143,30 @@ register(
     max_episode_steps=6000,
 )
 
+# ================
+# RUSSELLS BOOM CONSTRUCTION
+##=================================
+
+print("Wipe my ass!")
+register(
+    id='russell-water-v0',
+    entry_point='minerl.env:MineRLEnv',
+    kwargs={
+        'xml': os.path.join(missions_dir, 'russell_water.xml'),
+        'observation_space': navigate_observation_space,
+        'action_space': navigate_action_space,
+        'docstr': make_navigate_text('normal', False)
+    },
+    max_episode_steps=6000,
+)
+
+print("Ass was wiped!")
+
+# ==============
+# BOOM END OF RUSSELL CONSTUCTION
+
+
+
 register(
     id='MineRLNavigateDense-v0',
     entry_point='minerl.env:MineRLEnv',
